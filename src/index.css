@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-muzn-navy: #0D2137;
+  --color-muzn-green: #10B981;
+  --color-muzn-light-green: #34D399;
+  --color-muzn-grey: #F8F9FA;
+  
+  --animate-counter: counter 2s ease-out forwards;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply antialiased;
+  }
+  
+  body {
+    direction: rtl;
+    @apply bg-white text-muzn-navy overflow-x-hidden;
+  }
+}
+
+@keyframes counter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.glass-nav {
+  @apply backdrop-blur-md bg-white/80 border-b border-gray-100;
+}
+
+.service-card {
+  @apply bg-white p-8 rounded-2xl border border-gray-50 shadow-lg shadow-gray-100/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-xl hover:border-muzn-green/20;
+}
+
+.btn-primary {
+  @apply bg-gradient-to-r from-muzn-green via-muzn-green to-muzn-light-green text-white px-8 py-3 rounded-full font-bold transition-all hover:shadow-xl hover:shadow-muzn-green/30 active:scale-95 border-none;
+}
+
+.btn-secondary {
+  @apply border-2 border-muzn-navy text-muzn-navy px-8 py-3 rounded-full font-bold transition-all hover:bg-muzn-navy hover:text-white active:scale-95 flex items-center justify-center gap-2;
+}
