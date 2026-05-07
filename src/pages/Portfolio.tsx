@@ -57,7 +57,7 @@ const Portfolio: React.FC = () => {
           <motion.h1 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-[32px] sm:text-[48px] leading-[1.2] sm:leading-[48px] font-black text-muzn-navy mb-8 max-w-[355px] mx-auto text-center"
+            className="text-[32px] sm:text-[48px] leading-[51px] font-[Georgia] font-black text-muzn-navy mb-8 max-w-[355px] mx-auto text-center"
           >
             أعمالنا: <span className="text-muzn-green">أرقام</span> و <span className="text-muzn-green">أثر</span>
           </motion.h1>
