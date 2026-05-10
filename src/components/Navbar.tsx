@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Menu, X as CloseIcon, Facebook, Instagram } from 'lucide-react';
+import { Menu, X as CloseIcon, Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
+
+const TikTokIcon = () => (
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.06-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.9-.32-1.9-.39-2.81-.12-1.07.32-2.01 1.03-2.58 1.92-.12.44-.22.9-.22 1.34V16.71c.02.73.23 1.47.61 2.08.71 1.15 1.94 1.83 3.26 1.85 1.54.01 3.01-.9 3.63-2.3.26-.58.33-1.22.32-1.85-.02-3.52-.02-7.04-.02-10.56.02-2.72.01-5.43.01-8.15z" />
+  </svg>
+);
 
 const XIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -116,8 +122,11 @@ export const Navbar: React.FC = () => {
               
               <div className="flex justify-center gap-6">
                 {[
-                  { icon: <Facebook />, url: 'https://www.facebook.com/share/1NjobWtGkJ/' },
-                  { icon: <Instagram />, url: 'https://www.instagram.com/mozn.csr26?igsh=eTdzZWk1Mndmb2U5' },
+                  { icon: <Facebook />, url: 'https://www.facebook.com/share/1J9rSrpZ79/' },
+                  { icon: <Instagram />, url: 'https://www.instagram.com/mozn.csr26?igsh=dW1veDMxcGIwbm54' },
+                  { icon: <Linkedin />, url: 'https://www.linkedin.com/in/mozn-csr-55860b393?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+                  { icon: <TikTokIcon />, url: 'https://www.tiktok.com/@moznn.2026?_r=1&_t=ZS-96FcudvkXDg' },
+                  { icon: <Youtube />, url: 'https://youtube.com/@mozncsragncy26?si=6JtMMC5y6JxJkZ4q' },
                   { icon: <XIcon />, url: 'https://x.com/moznami26' }
                 ].map((s, i) => (
                   <a key={i} href={s.url} target="_blank" rel="noreferrer" className="w-12 h-12 rounded-full bg-muzn-grey flex items-center justify-center text-muzn-navy hover:bg-muzn-green hover:text-white transition-all">

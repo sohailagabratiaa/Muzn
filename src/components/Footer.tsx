@@ -1,6 +1,6 @@
 import React, { useState, Suspense, lazy } from 'react';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Instagram, Linkedin, Facebook } from 'lucide-react';
+import { MessageCircle, Instagram, Linkedin, Facebook, Youtube } from 'lucide-react';
 
 const LegalModal = lazy(() => import('./LegalModal').then(m => ({ default: m.LegalModal })));
 
@@ -59,12 +59,13 @@ export const Footer: React.FC = () => {
                </ul>
                <div className="flex gap-4 mt-8 justify-end flex-wrap">
                   {[
-                    { name: 'WhatsApp', icon: <MessageCircle size={18} />, url: 'https://wa.me/201064973569' },
+                    { name: 'Facebook', icon: <Facebook size={18} />, url: 'https://www.facebook.com/share/1J9rSrpZ79/' },
+                    { name: 'Instagram', icon: <Instagram size={18} />, url: 'https://www.instagram.com/mozn.csr26?igsh=dW1veDMxcGIwbm54' },
+                    { name: 'LinkedIn', icon: <Linkedin size={18} />, url: 'https://www.linkedin.com/in/mozn-csr-55860b393?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app' },
+                    { name: 'TikTok', icon: <TikTokIcon />, url: 'https://www.tiktok.com/@moznn.2026?_r=1&_t=ZS-96FcudvkXDg' },
+                    { name: 'YouTube', icon: <Youtube size={18} />, url: 'https://youtube.com/@mozncsragncy26?si=6JtMMC5y6JxJkZ4q' },
                     { name: 'X', icon: <XIcon />, url: 'https://x.com/moznami26' },
-                    { name: 'Instagram', icon: <Instagram size={18} />, url: 'https://www.instagram.com/mozn.csr26?igsh=eTdzZWk1Mndmb2U5' },
-                    { name: 'LinkedIn', icon: <Linkedin size={18} />, url: 'https://www.linkedin.com/company/moznami' },
-                    { name: 'TikTok', icon: <TikTokIcon />, url: 'https://www.tiktok.com/@moznami' },
-                    { name: 'Facebook', icon: <Facebook size={18} />, url: 'https://www.facebook.com/moznami' },
+                    { name: 'WhatsApp', icon: <MessageCircle size={18} />, url: 'https://wa.me/201064973569' },
                   ].map((social, idx) => (
                     <a key={idx} href={social.url} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-gradient-to-tr hover:from-muzn-green hover:to-muzn-light-green transition-all hover:border-transparent hover:scale-110 active:scale-95 shadow-lg hover:shadow-muzn-green/20">
                       {social.icon}
