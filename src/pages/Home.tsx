@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { StatCounter } from '../components/StatCounter';
 import { motion } from 'motion/react';
 import { 
@@ -81,17 +82,17 @@ const Home: React.FC = () => {
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-2xl lg:max-w-none">
-              <a href="/contact" className="btn-primary flex items-center justify-center gap-3 text-lg font-bold h-[60px] sm:h-[64px] transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-muzn-green/20 px-6">
+              <Link to="/contact" className="btn-primary flex items-center justify-center gap-3 text-lg font-bold h-[60px] sm:h-[64px] transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-muzn-green/20 px-6">
                 ابدأ مشروعك
                 <Send size={20} />
-              </a>
-              <a href="https://wa.me/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-lg font-bold h-[60px] sm:h-[64px] bg-white border border-muzn-green text-muzn-green hover:bg-muzn-green hover:text-white transition-all hover:scale-[1.02] active:scale-95 rounded-full px-6">
+              </Link>
+              <a href="https://wa.me/201064973569" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 text-lg font-bold h-[60px] sm:h-[64px] bg-white border border-muzn-green text-muzn-green hover:bg-muzn-green hover:text-white transition-all hover:scale-[1.02] active:scale-95 rounded-full px-6">
                 تواصل معنا
                 <MessageCircle size={20} />
               </a>
-              <a href="/services" className="btn-secondary border-white/20 text-white hover:bg-white hover:text-muzn-navy flex items-center justify-center gap-3 text-lg font-bold h-[60px] sm:h-[64px] transition-all hover:scale-[1.02] active:scale-95 px-6 sm:col-span-2 lg:col-span-1">
+              <Link to="/services" className="btn-secondary border-white/20 text-white hover:bg-white hover:text-muzn-navy flex items-center justify-center gap-3 text-lg font-bold h-[60px] sm:h-[64px] transition-all hover:scale-[1.02] active:scale-95 px-6 sm:col-span-2 lg:col-span-1">
                 استكشف خدماتنا
-              </a>
+              </Link>
             </div>
           </motion.div>
 
@@ -183,10 +184,10 @@ const Home: React.FC = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="/services" className="font-bold text-muzn-green hover:underline flex items-center justify-center gap-2">
+            <Link to="/services" className="font-bold text-muzn-green hover:underline flex items-center justify-center gap-2">
               شاهد جميع خدماتنا
               <span className="text-xl">←</span>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -264,7 +265,7 @@ const Home: React.FC = () => {
                     <p className="text-xl sm:text-2xl font-bold text-white italic">"لأن الحقيقة البسيطة: اللي بيجرب هو بس اللي بيوصل."</p>
                   </blockquote>
                   <div className="text-center lg:text-right">
-                    <a href="/contact" className="btn-primary inline-block">سجل اهتمامك الآن</a>
+                    <Link to="/contact" className="btn-primary inline-block">سجل اهتمامك الآن</Link>
                   </div>
               </div>
             </div>

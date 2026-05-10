@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { 
   TrendingUp, 
@@ -278,10 +279,10 @@ const Portfolio: React.FC = () => {
               دعنا نحول أهدافك إلى أرقام، وعلامتك التجارية إلى أيقونة لا تُنسى. ابدأ رحلتك مع مُزن اليوم.
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a href="/contact" className="btn-primary flex items-center justify-center gap-3 text-xl px-12 py-5 h-auto transition-all hover:scale-105 active:scale-95">
+              <Link to="/contact" className="btn-primary flex items-center justify-center gap-3 text-xl px-12 py-5 h-auto transition-all hover:scale-105 active:scale-95">
                 ابدأ مشروعك الآن
                 <ArrowLeft size={24} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

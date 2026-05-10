@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import { 
   Users, 
@@ -128,7 +129,7 @@ const Services: React.FC = () => {
               <p className="text-gray-300 text-xl mb-12 leading-relaxed">
                 دعنا نجلس معاً ونناقش احتياجات عملك لنصمم لك استراتيجية تحقق أهدافك وتتجاوز توقعاتك.
               </p>
-              <a href="/contact" className="btn-primary px-12 py-5 text-xl inline-block">تواصل معنا الآن</a>
+              <Link to="/contact" className="btn-primary px-12 py-5 text-xl inline-block">تواصل معنا الآن</Link>
            </div>
         </div>
       </div>

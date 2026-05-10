@@ -1,4 +1,5 @@
 import React, { useState, Suspense, lazy } from 'react';
+import { Link } from 'react-router-dom';
 import { MessageCircle, Instagram, Linkedin, Facebook } from 'lucide-react';
 
 const LegalModal = lazy(() => import('./LegalModal').then(m => ({ default: m.LegalModal })));
@@ -45,7 +46,7 @@ export const Footer: React.FC = () => {
                <h4 className="font-bold text-lg mb-6">روابط سريعة</h4>
                <ul className="space-y-4">
                   {navLinks.map(l => (
-                    <li key={l.name}><a href={l.href} className="text-gray-400 hover:text-muzn-green transition-colors">{l.name}</a></li>
+                    <li key={l.name}><Link to={l.href} className="text-gray-400 hover:text-muzn-green transition-colors">{l.name}</Link></li>
                   ))}
                </ul>
             </div>
